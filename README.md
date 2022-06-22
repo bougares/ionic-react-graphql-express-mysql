@@ -58,16 +58,6 @@
       │   └── package.json
       │   └── .env
       │
-      ├── ionic 
-      │   ├── public
-      │   ├── src
-      │   │   ├── components
-      │   │   ├── setup
-      │   │   └── index.js
-      │   │
-      │   ├── .env
-      │   └── package.json
-      │
       ├── .gitignore
       └── README.md
 
@@ -79,60 +69,6 @@ npm start
 npm run dev
 ```
 
-
-## 📸 Screenshots
-![screenshot](http://atulmy.com/atulmy.com/attachments/images/fullstack-graphql.gif?v=0.1)
-
-Video: [MOV](http://atulmy.com/atulmy.com/attachments/images/fullstack-graphql.mov)
-
-## 🏗 Core Structure
-    fullstack-grap<<hql
-      ├── api (api.example.com)
-      │   ├── src
-      │   │   ├── config
-      │   │   ├── models
-      │   │   ├── schema
-      │   │   ├── setup
-      │   │   └── index.js
-      │   │
-      │   └── package.json
-      │
-      ├── web (example.com)
-      │   ├── public
-      │   ├── src
-      │   │   ├── components
-      │   │   ├── setup
-      │   │   └── index.js
-      │   │
-      │   ├── .env
-      │   └── package.json
-      │
-      ├── .gitignore
-      └── README.md
-
-
-## 📘 Guides
-### API
-- Adding new Module (Eg: Users):
-  - Copy `/api/src/models/thought.js` to `/api/src/models/user.js` and modify the file for table name and respective fields
-  - Add an entry to the `models` object in `/api/src/models/index.js`
-  - Copy `/api/src/schema/thoughts` to `/api/src/schema/users` and modify `type.js`, `resolvers.js` and `fields/query.js` and `fields/mutations.js`
-  - Import `/api/src/schema/users/fields/query.js` in `/api/src/schema/query.js`
-  - Import `/api/src/schema/users/fields/mutations.js` in `/api/src/schema/mutations.js`
-
-### Webapp
-- Adding new Module (Eg: Users):
-  - Create folder `users` under `/web/src/components/`
-  - Create your Container and Resusable components under `/web/src/components/users`
-  - Create `api` folder under `/web/src/components/users`
-  - Add `actions.js` where all your Redux Action Types and Actions will reside (refer `/web/src/components/thoughts/api/actions.js`)
-  - Add `state.js` where all your respective Reducers will recide (refer `/web/src/components/thoughts/api/state.js`)
-  - Import the module state in `/web/src/setup/store.js` to make it avaliable to the app
-  - Encapsulate all your User related code in `/web/src/components/users`
-- Adding new Route (Eg: `/users`):
-  - Add a new entry to `routes` object in `/web/src/setup/routes.js` (eg `user: { list: '/list' }`)
-  - Edit `/web/src/components/App.js` and add the route entry
-  
 ## Sample GraphQL Queries
 
 ### Show all users
